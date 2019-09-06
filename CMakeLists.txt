@@ -260,9 +260,9 @@ if(ENABLE_THREADED_RESOLVER)
 endif()
 
 # Check for all needed libraries
-check_library_exists_concat("dl"     dlopen       HAVE_LIBDL)
-check_library_exists_concat("socket" connect      HAVE_LIBSOCKET)
-check_library_exists("c" gethostbyname "" NOT_NEED_LIBNSL)
+#check_library_exists_concat("dl"     dlopen       HAVE_LIBDL)
+#check_library_exists_concat("socket" connect      HAVE_LIBSOCKET)
+#check_library_exists("c" gethostbyname "" NOT_NEED_LIBNSL)
 
 # Yellowtab Zeta needs different libraries than BeOS 5.
 if(BEOS)
@@ -498,10 +498,10 @@ if(NOT CURL_DISABLE_LDAPS)
 endif()
 
 # Check for idn
-check_library_exists_concat("idn2" idn2_lookup_ul HAVE_LIBIDN2)
+#check_library_exists_concat("idn2" idn2_lookup_ul HAVE_LIBIDN2)
 
 # Check for symbol dlopen (same as HAVE_LIBDL)
-check_library_exists("${CURL_LIBS}" dlopen "" HAVE_DLOPEN)
+#check_library_exists("${CURL_LIBS}" dlopen "" HAVE_DLOPEN)
 
 option(CURL_ZLIB "Set to ON to enable building curl with zlib support." ON)
 set(HAVE_LIBZ OFF)
